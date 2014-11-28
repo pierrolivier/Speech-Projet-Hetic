@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Remote</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/remote.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+	
+</head>
+<body>
+	
+	<section>
+        <div class="player">
+            <div class="top cf">
+                <div class="song">
+                    <div class="title_video">Vidéo jouée :</div>
+                    <div id="name" class="artis">Remote</div>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="bar complete"></div>
+                <div class="bar progressBar"></div>
+            </div>
+            <div class="bottomwrap">
+                <div class="controlplayer">
+                    <ul>
+                        <li data-event="play" class="play"><i id="ico_lecture" class="fa fa-fw fa-pause"></i></li>
+                        <li data-event="stop" class="stop"><i class="fa fa-fw fa-stop "></i></li>
+                        <li data-event="rec" class="rec"><i class="fa fa-fw fa-circle"></i></li>
+                        <li data-event="mute" class="mute"><i id="ico_mute" class="fa fa-fw fa-volume-off"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sound">
+                <ul>
+                    <li data-event="65193207" class="bruitage">Bruitage 1</li>
+                    <li data-event="5910704" class="bruitage">Bruitage 2</li>
+                    <li data-event="5910782" class="bruitage">Bruitage 3</li>
+                    <li data-event="108333898" class="bruitage">Bruitage 4</li>
+                </ul>
+            </div>
+        </div>
+	</section>
+
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<!-- <script type="text/javascript" src="js/socket.io.js"></script> -->
+	<script type="text/javascript" src="js/model.js"></script>
+	<script type="text/javascript" src="js/UI.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+body, html{
+	width:100%;
+	padding:0;
+	margin:0;
+	background-color: black;
+    font-family: "Open Sans";
+}
+
+#barreMenu{
+	background-color: black;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#barreMenu p{
+	color:#e66a39;
+	margin: 0 36px;
+    padding: 7px;
+}
+
+.videos:hover .opacity{
+	background-color: rgba(0, 0, 0, 0);
+	-moz-transition-property: background;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 0.5s;
+	-o-transition-property: background;
+	-o-transition-duration: 0.5s;
+}
+
+section{
+	text-align: center;
+	width:100%;
+	margin-top: 42px;
+}
+
+.videoList {
+    position: relative;
+    width: 288px;
+    height: 220px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: -4px;
+    margin-top: -4px;
+}
+
+.videoList .description{
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.videoList:hover .description {
+    margin-top : -50px;
+}
+
+.infos{
+    width: 100%;
+    height: 50px;
+    background-color: #313131;
+    display: block;
+    border-top: 3px solid #e66a39;
+}
+
+
+.infos p {
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+}
+
+.infos > p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.infos .views{
+    margin-left: 5px;
+    font-size: 8pt;
+    font-weight: lighter;
+}
+
+
+
+.videos{
+	cursor:pointer;
+	margin: auto;
+	width:300px;
+	height:220px;
+	background-size: cover;
+	background-position: center center;
+}
+
+.opacity{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, .6);
+	-moz-transition-property: background;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 0.5s;
+	-o-transition-property: background;
+	-o-transition-duration: 0.5s;
+}
+
+.videos p{
+	color:white;
+	font-family: "Lato";
+	margin: 0;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	font-size: 38px;
+}
+
+.videos .icon-music{
+	font-size: 18px;
+}
+
+.videos>.views{
+	position: relative;
+	right:10px;
+	top:10px;
+	text-align: left;
+	text-align: right;
+	font-size: 20px;
+}

@@ -1,0 +1,737 @@
+html, body{
+	padding: 0;
+	margin:0;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	overflow:hidden;
+}
+
+p{
+	margin:0;
+}
+
+.backgroundBlack{
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+#home{
+	background-image: url("../medias/pictures/home.jpg");
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100;
+	background-size: cover;
+    width: 100%;
+    height: 100%;
+	-webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
+
+#home p{
+	color: #e66a39;
+	text-align: center;
+}
+
+#home #btnStart{
+	border: 2px solid #e66a39;
+    margin: 40px auto 0;
+    width: 100px;
+    font-size: 18pt;
+    padding: 5px 20px;
+    cursor:pointer;
+}
+
+#home>p:first-child{
+	width: 400px;
+    margin: 230px auto 20px;
+    font-size: 18pt;
+}
+
+#home>p:last-child{
+	color:white;
+	margin-top: 80px;
+    font-size: 16pt;
+}
+
+#entete{
+	height: 40px;
+	width:100%;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:110;
+	-webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
+
+#entete>p{
+	position:relative;
+	top:0;
+	color:white;
+	display: inline-block;
+	padding: 7px;
+	color: #e66a39;
+}
+
+#entete span{
+	display: inline-block;
+	color:white;
+	padding: 12px 10px;
+	cursor: pointer;
+	vertical-align: top;
+	-webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+#entete span:hover{
+	background-color: rgba(0, 0, 0, 1);
+	-webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.icon-close, .icon-menu2{
+	position:relative;
+	top:0;
+}
+
+/*css du bouton enregistrement */
+#entete .icon-mic, #entete .icon-mobile{
+	padding: 9px 10px;
+	position : absolute;
+	top:0;
+	right:250px;
+    font-weight: bold;
+    font-size: 1.3em;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#entete .icon-mic p{
+	font-size: 10pt;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+    margin-top: 2px;
+    vertical-align: top;
+}
+
+#entete .icon-mic:after{
+    vertical-align: middle;
+}
+
+#entete .icon-mobile{
+	right:200px;
+}
+
+/*css du lien plus de vidéos*/
+#entete a{
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: top;
+	position: fixed;
+    right: 0;
+    top: 0;
+	text-decoration: none;
+	color:white;
+	padding: 8px 10px;
+}
+
+/*css du timer de lancement de l'enregistrement et de l'analyser*/
+#recordBox{
+	width:250px;
+	height:80px;
+	position:absolute;
+	top:60px;
+	right:165px;
+	background-color: rgb(0,0,0);
+	z-index:20;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+#recordBox:before{
+	content:'';
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	background-color: black;
+	left:118px;
+	top:-10px;
+
+	-webkit-transform:rotate(45deg);       
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+#timer{
+	display: none;
+	font-size:11pt;
+	font-weight: bold;
+	margin-top: 27px;
+	color:white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#timer .notice{
+	display: block;
+	font-size: 7pt;
+	font-weight: initial;
+}
+
+#analyser{
+	display: none;
+	position: absolute;
+	bottom: 20px;
+	left:15px;
+	width:325px;
+	height:50px;
+}
+
+
+/*css du QR-code */
+.hide{
+	display:none;
+
+	-webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.visible{
+	display: block;
+
+	-webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+#remote{
+	width:250px;
+	height:200px;
+	position:absolute;
+	top:60px;
+	right:91px;
+	background-color: rgb(0,0,0);
+	z-index:20;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+#remote:before{
+	content:'';
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	background-color: black;
+	left:118px;
+	top:-10px;
+
+	-webkit-transform:rotate(45deg);       
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+#remote p{
+	color: white;
+	text-align: center;
+	margin:15px 0px;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+#remote canvas{
+	margin-left: 76px;
+
+}
+
+/*css pour la liste des audios */
+#listAudioTracks{
+	width: 300px;
+	height:100%;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:15;
+	background-color: #313131;
+	-webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
+
+.list_audio_close{
+	margin-left: -300px;
+}
+
+#listAudioTracks #audioTracks{
+	text-align: center;
+	height: 40px;
+}
+
+#listAudioTracks #audioTracks p{
+	color: white;
+	font-size: 9pt;
+    font-weight: bold;
+	line-height: 40px;
+}
+
+#listAudioTracks .by{
+	font-size: 0.7em;
+	color: rgb(178,178,178);
+}
+
+#listAudioTracks .track{
+	font-weight: bold;
+}
+
+#listAudioTracks #listeAudio{
+	overflow-y: scroll;
+	width: 300px;	
+}
+
+#listAudioTracks #listeAudio::-moz-scrollbar, #listAudioTracks #listeAudio::-webkit-scrollbar{
+	display: none;
+}
+
+#listAudioTracks #listeAudio .sound{
+	padding:8px 10px 8px 10px;
+	border-bottom:2px solid #4C4C4C;
+	color: white;
+	padding-left:17px; 
+    cursor: pointer;
+}
+
+#listAudioTracks #listeAudio .sound:hover{
+    color: black;
+    background-color: white;
+}
+
+.sound>div{
+	display: inline-block;
+	vertical-align: middle;
+	-moz-box-sizing: border-box;
+	width:50%;
+	box-sizing: border-box;
+}
+
+.sound>div:first-child>span{
+	display: block;
+	margin-right:-4px;
+}
+
+.sound>div:last-child{
+	text-align: right;
+	
+}
+
+#listeAudio .icon-play2, #listeAudio .icon-pause{
+	font-size: 24px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.like{
+	cursor: pointer;
+    padding: 2px 7px;
+    font-size: 9pt;
+    border : 2px solid;
+    border-radius: 100px;
+    margin-right: 5px;
+
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.like:hover{
+	color: rgb(178,178,178);
+
+	-webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+/* css pour le player vidéo */
+video{
+	margin:0 auto;
+	width:100%;
+	height: auto;
+	cursor:pointer;
+	overflow-y: hidden;
+}
+
+#video{
+	width:100%;
+	background-color: rgba(80,80,80,0.7);
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
+
+/*css pour la barre d'enregistrement de la vidéo*/
+#uploadProgress{
+	width:250px;
+	height: 100px;
+	display: none;
+	background-color: #313131;
+    border-radius: 5px;
+	position: absolute;
+	bottom: 50%;
+	left:50%;
+    margin: 0 0 -50px -125px;
+	padding: 0 20px;
+}
+
+#uploadProgress p{
+	color:white;
+	font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 30px 0 15px;
+    text-align: center;
+}
+
+#uploadProgress #progressDownload{
+	position: relative;
+	border-radius: 5px;
+}
+
+#uploadProgress #progressDownload span{
+	position: absolute;
+	height:5px;
+	cursor:pointer;
+	border-radius: 5px;
+}
+
+#uploadProgress #progressDownload #download{
+	z-index:18;
+	background-color:#e66a39;
+	border-radius: 5px;
+}
+
+#uploadProgress #progressDownload #bufferDownload{
+	width:100%;
+	display: inline-block;
+	background-color: white;
+	border-radius: 5px;
+}
+
+/*css pour la popup de partage */
+#partage{
+	width: 350px;
+    height: 100px;
+    background-color: #313131;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    margin: 0px 0 -50px -175px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#partage p {
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#partage a {
+    font-size: 8pt;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e66a39;
+    margin-top: 20px;
+    display: block;
+}
+
+#partage .close_partage {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    cursor: pointer;
+}
+
+/*css pour la barre de progression de la vidéo*/
+#progressEtDuration{
+	position: fixed;
+	text-align: center;
+	bottom: 25px;
+    z-index: 16;
+    margin:0;
+}
+
+.progressAnim{
+	-webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
+
+#progressEtDuration>div{
+	display: inline-block;
+}
+
+#progressEtDuration #btnPlayVideo{
+	color:white;
+    font-size: 1.4em;
+    margin-right: 3px;
+    cursor:pointer;
+}
+
+#progressBar{
+	z-index:16;
+	width: 80%;
+	position: relative;
+	vertical-align: middle;
+	margin-bottom: 14px;
+
+	-webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
+
+#progressBar span{
+	position: absolute;
+	height:5px;
+	left:0;
+	cursor:pointer;
+	border-radius: 5px;
+}
+
+#progressBar #progress{
+	z-index:18;
+	background-color:rgba(255,255,255,1);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#progressBar #buffer{
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 5px;
+}
+
+/*css du temps de la vidéo qui défile*/
+#duration{
+	margin:0;
+	color:white;
+	vertical-align: bottom;
+	font-size: 12px;
+	margin-bottom: 12px;
+}
+
+/*css de la barre de controle du son*/
+input[type=range]{
+	opacity: 0;
+    color: rgba(255,255,255,0.8);
+    width: 70px;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    -webkit-transform:rotate(270deg);       
+    -moz-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
+    -ms-transform:rotate(270deg);
+    transform:rotate(270deg);
+
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.volume:hover input[type=range]{
+	opacity: 1;
+	-webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgba(255,255,255);
+}
+
+input[type=range]:focus, input[type=range]::-moz-focus-outer {
+    outline: none;
+    border:0;
+}
+
+input[type=range]::-moz-range-track {
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgba(255,255,255);
+}
+
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgba(255,255,255);
+}
+
+/*css des boutons play/pause et du controle volume*/
+#control>*{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px 2px;
+}
+
+#control span{
+	cursor: pointer;
+}
+
+#control .icon-volume-medium, #control .icon-volume-mute{
+	color:white;
+    font-size: 1.4em;
+    line-height: 40px;
+}
+
+#control .volume{
+	vertical-align: bottom;
+	margin-left: -20px;
+}
+
+/* css du petit loader du son*/
+.loader{
+	width:30px;
+	margin-right: 5px;
+	display: none;
+}
+
+/*css du formulaire du pseudo*/
+form{
+	display: none;
+}
+
+fieldset{
+	border:0px;
+	width:250px;
+    border-radius: 5px;
+	bottom: 50%;
+	left:50%;
+    margin: 0 0 -45px -125px;
+	text-align: center;
+	background-color: #313131;
+	position: absolute;
+	z-index: 11;
+	padding:10px 5px;
+}
+
+label{
+    color: white;
+    text-transform: uppercase;
+    font-size: 10pt;
+    font-weight: bold;
+    display: block;
+	margin-bottom: 10px;
+}
+
+input{
+	border:none;
+	border-radius: 4px;
+	display: block;
+	margin: auto;
+	padding-left:10px;
+    height: 20px;
+    width: 70%;
+    font-size: 10pt;
+}
+
+input[type=submit]{
+	margin-top: 8px;
+    font-size: 9pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e66a39;
+    background: none;
+}
+
+#ifMobile {
+    display: none;
+    padding: 50% 0 0 0;
+    margin-top: -50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#ifMobile h2 {
+    color: #e66a39;
+    font-weight: lighter;
+}
+
+#ifMobile p {
+    color: white;
+    font-weight: lighter;
+    font-size: 11pt;
+}
+
+@media screen and (max-width: 600px) {
+  #ifMobile {
+    display: block;
+    z-index: 1000;
+    background: black;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+}

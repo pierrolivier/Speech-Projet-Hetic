@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Remote</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/remote.css">
+  
+	
+</head>
+<body>
+	
+	<h1 class="title">Remote App</h1>
+
+	<div id="remote">
+		<div data-event="play" class="play">Play</div>
+		<div data-event="stop" class="stop">Stop</div>
+		<div data-event="mute" class="mute">Mute</div>
+		<div data-event="fullscreen" class="fullscreen">Plein Ecran</div>
+	</div>
+
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script type="text/javascript" src="js/model.js"></script>
+	<script type="text/javascript" src="js/UI.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+</body>
+</html>

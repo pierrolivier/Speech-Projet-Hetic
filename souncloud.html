@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+SC.initialize({
+  client_id: 'a0c1c7c655f3206e6699187d6b39e044'
+});
+
+// stream track id 293
+SC.stream("/tracks/177051763", function(sound){
+  sound.play();
+});
+</script>
+
+</body>
+</html>
+

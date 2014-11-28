@@ -1,0 +1,171 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600);
+html {
+  background: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.player {
+  padding: 20px 20px;
+}
+.player .song {
+  color: white;
+}
+.player .song .artis {
+  font-size: 26px;
+  font-weight: 600;
+}
+.player .song .feat {
+  font-weight: 600;
+}
+.player .song .songtitle {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.player .control ul {
+  list-style: none;
+  font-size: 25px;
+  -webkit-margin-before: 0em;
+  color: #cdd2d7;
+}
+.player .control ul li {
+  display: inline-block;
+  transition: color 0.3s linear;
+}
+.player .control ul li:hover {
+  color: #333;
+}
+.player .progress {
+  margin-top: 20px;
+  position: relative;
+}
+.player .progress .bar {
+  background: white;
+  width: 20%;
+  height: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  position: absolute;
+  overflow: hidden;
+}
+
+.player .progress .complete {
+  width: 100%;
+  background-color: black;
+}
+
+.player .bottomwrap {
+  margin-top: 50px;
+}
+.player .controlplayer ul {
+  list-style: none;
+  -webkit-padding-start: 0px;
+}
+.player .controlplayer ul li {
+    display: inline-block;
+    color: white;
+    padding: 15px;
+    border: 2px solid;
+    border-radius: 100%;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: background 0.2s linear;
+}
+.player .controlplayer ul li.play {
+    width: 48%;
+    border-radius: 15px;
+}
+
+.player .controlplayer ul li.stop {
+    width: 48%;
+    border-radius: 15px;
+    float: right;
+}
+
+.player .controlplayer ul li.rec {
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+
+  color: #fe8698
+}
+
+
+.player .sound{
+    display: none;
+    margin: 10px 0 0 0;
+}
+
+.player .sound ul {
+  list-style: none;
+  -webkit-padding-start: 0px;
+}
+
+.player .sound ul li {
+    display: inline-block;
+    color: white;
+    padding: 15px;
+    width: 49%;
+    border: 2px solid;
+    border-radius: 15px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: background 0.2s linear;
+}
+
+.player ul li:hover {
+  background: #333;
+}
+
+.player .shufflerepeat {
+  float: right;
+  font-size: 30px;
+}
+.player .shufflerepeat ul {
+  list-style: none;
+}
+.player .shufflerepeat ul li {
+  display: inline-block;
+  color: #d9d9d9;
+  transition: color 0.3s linear;
+}
+.player .shufflerepeat ul li:hover {
+  color: #333;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
